@@ -1,0 +1,291 @@
+@import url("./header.css");
+@import url("./footer.css");
+
+.list-unstyled {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Hero */
+.hero {
+  padding-top: 120px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px; /* Espaçamento interno para o conteúdo */
+  background-image: url("../img/local/praia-ce.jpg"); /* Substitua pela imagem desejada */
+  background-size: cover; /* Ajusta a imagem ao tamanho do conteúdo */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute; /* Posiciona o conteúdo em relação ao contêiner pai */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajusta o ponto de referência para o centro */
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 600px; /* Limita a largura do conteúdo */
+  z-index: 50;
+}
+
+.hero-content h1 {
+  font-size: 40px; /* Tamanho do título */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px; /* Tamanho do parágrafo */
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-form input {
+  width: 100%;
+  max-width: 400px; /* Largura máxima para o campo de entrada */
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.contact-form button {
+  width: 100%;
+  max-width: 200px; /* Largura máxima para o botão */
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Features */
+.feature-item {
+  border: 1px solid var(--cor-dark);
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Seção de Vantagens */
+.benefits-section {
+  padding-top: 120px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.title {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.benefit-item {
+  flex: 1 1 30%;
+  min-width: 250px;
+  max-width: 300px;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.icon-container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.benefit-title {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #003366;
+}
+
+.benefit-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Testimonial */
+blockquote {
+  border-left: 5px solid var(--cor-contraste);
+  padding-left: 20px;
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* FAQ */
+.faq-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: #f9fafb;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: #003366;
+}
+
+.faq-content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.question {
+  width: 100%;
+  padding: 1rem;
+  background-color: #e6effc;
+  color: #003366;
+  font-size: 1rem;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+
+.question:hover {
+  background-color: #d0e4f8;
+}
+
+.answer {
+  display: none;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #555;
+  border: 1px solid #d0e4f8;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+/* Seção de Testemunho */
+.testimonial {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajuste o tamanho conforme necessário */
+  background-image: url("img/testimonial-bg.jpg"); /* Substitua com o caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Cor da fonte, ajustável */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-container {
+  text-align: center;
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fundo escuro semi-transparente para melhorar a visibilidade do texto */
+  border-radius: 8px;
+}
+
+.testimonial blockquote {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.testimonial footer {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.contact {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.answer {
+  margin-left: 20px;
+  color: var(--cor-dark);
+}

@@ -1,0 +1,192 @@
+/* Estilos do Rodapé */
+.footer {
+  background-color: #2b2f33;
+  color: #b0b0b0;
+  padding-top: 40px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column {
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.footer-column h6 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-column ul li i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Estilo da parte inferior do rodapé */
+.footer-bottom {
+  background-color: #1e2226;
+  border-top: 1px solid #444;
+  text-align: center;
+  padding: 15px;
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsividade para dispositivos menores (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .footer-column {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  .footer-row {
+    gap: 15px;
+    justify-content: center; /* Centraliza as colunas na linha */
+  }
+}
+
+/* Responsividade para dispositivos móveis (max-width: 768px) */
+@media (max-width: 768px) {
+  .faq-container {
+    padding-right: 16px;
+    padding-left: 16px;
+    width: auto;
+  }
+  .hero-content {
+    padding: 0px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px; /* Reduz o tamanho do título em telas pequenas */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Ajuste no tamanho do parágrafo */
+  }
+
+  .contact-form input {
+    max-width: 90%; /* Ajusta o campo de entrada para largura maior */
+  }
+
+  .contact-form button {
+    max-width: 90%; /* Ajusta o botão para a largura maior */
+  }
+
+  .hero {
+    padding: 30px 15px; /* Reduz o espaçamento do hero */
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza o conteúdo */
+  }
+  .footer-row {
+    gap: 10px;
+    justify-content: center; /* Centraliza as colunas na linha */
+  }
+  .footer {
+    padding-top: 20px;
+    text-align: center; /* Centraliza o conteúdo principal */
+  }
+
+  .footer-column h6 {
+    font-size: 1.1rem;
+  }
+  .footer-column ul li a {
+    font-size: 0.9rem;
+  }
+  .footer-bottom {
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center; /* Centraliza o texto do rodapé inferior */
+  }
+}
+
+/* Responsividade para telas muito pequenas (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer-column h6 {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    padding: 0px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px; /* Título ainda menor em telas menores */
+  }
+
+  .hero-content p {
+    font-size: 14px; /* Reduz o tamanho do parágrafo */
+  }
+
+  .contact-form input {
+    max-width: 90%; /* Continua com a largura maior */
+  }
+
+  .contact-form button {
+    max-width: 90%; /* Continua com a largura maior */
+  }
+
+  .footer-column ul li a {
+    font-size: 0.85rem;
+  }
+
+  .footer {
+    padding-top: 15px;
+  }
+
+  .footer-row {
+    gap: 8px;
+    display: flex;
+    flex-direction: column; /* Empilha as colunas verticalmente */
+  }
+
+  .footer-column {
+    width: 100%;
+    padding-left: 16px;
+    text-align: left;
+  }
+
+  .footer-bottom {
+    padding: 8px;
+    font-size: 0.85rem;
+    text-align: left;
+  }
+}

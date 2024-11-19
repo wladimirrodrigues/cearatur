@@ -1,0 +1,110 @@
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 72px;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0056b3;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+.navbar .nav-link {
+  color: #007bff;
+  position: relative;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-primary {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+/* Botão hambúrguer */
+.navbar-toggle {
+  display: none; /* Esconde o botão em telas maiores */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Menu responsivo */
+@media (max-width: 768px) {
+  .navbar div {
+    display: none; /* Esconde os links em telas menores */
+    flex-direction: column; /* Alinha os links em coluna quando exibidos */
+    position: absolute;
+    top: 72px; /* Abaixo da navbar */
+    right: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    gap: 16px;
+  }
+
+  .navbar div.active {
+    display: flex; /* Exibe o menu quando ativo */
+  }
+
+  .navbar-toggle {
+    display: block; /* Exibe o botão hambúrguer em telas menores */
+  }
+}

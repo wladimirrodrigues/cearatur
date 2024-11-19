@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CearaTur - Página de Pagamento</title>
+  <link rel="shortcut icon" href="img/cearatur.png" type="image/png">
+  <link rel="stylesheet" href="./css/pagamento.css" />
+</head>
+
+<body>
+  <div class="payment-container">
+    <h2>Pagamento Seguro</h2>
+
+    <div class="card-icons">
+      <img src="./img/visa.png" alt="Visa" />
+      <img src="./img/mastercard.png" alt="MasterCard" />
+      <img src="./img/paypal.png" alt="PayPal" />
+    </div>
+
+    <!-- Formulario de pagamento -->
+    <form id="paymentForm">
+      <div class="input-group">
+        <input type="text" class="input-field" placeholder="Nome no Cartão" required />
+      </div>
+      <div class="input-group">
+        <input type="text" class="input-field" placeholder="Número do Cartão" required />
+      </div>
+      <div class="input-group">
+        <input type="text" class="input-field" placeholder="MM/AA (Expiração)" required />
+      </div>
+      <div class="input-group">
+        <input type="text" class="input-field" placeholder="CVV" required />
+      </div>
+      <button type="submit" class="btn">Pagar Agora</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      Pagamento realizado com sucesso!
+    </div>
+  </div>
+
+  <script>
+    // Simulando o envio do formulário
+    document
+      .getElementById("paymentForm")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Exibir mensagem de sucesso
+        document.getElementById("successMessage").style.display = "block";
+
+        // Desativar o botão de pagamento por 2 segundos
+        const btn = document.querySelector(".btn");
+        btn.disabled = true;
+        setTimeout(function () {
+          document.getElementById("successMessage").style.display = "none";
+          btn.disabled = false;
+        }, 3000);
+      });
+  </script>
+</body>
+
+</html>

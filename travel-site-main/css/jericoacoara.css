@@ -1,0 +1,131 @@
+/* Hero */
+.hero {
+  padding-top: 120px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px; /* Espaçamento interno para o conteúdo */
+  background-image: url("../img/local/praia-ce.jpg"); /* Substitua pela imagem desejada */
+  background-size: cover; /* Ajusta a imagem ao tamanho do conteúdo */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute; /* Posiciona o conteúdo em relação ao contêiner pai */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajusta o ponto de referência para o centro */
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 600px; /* Limita a largura do conteúdo */
+  z-index: 50;
+}
+
+.hero-content h1 {
+  font-size: 40px; /* Tamanho do título */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px; /* Tamanho do parágrafo */
+  margin-bottom: 30px;
+}
+
+.about {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.about h1,
+.about h2,
+.about h3,
+.about h4 {
+  color: #1e90ff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.about h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.about h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.about h4 {
+  font-size: 1.3rem;
+  margin-top: 1.2rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.about strong {
+  color: #333;
+}
+
+.about ul li::marker {
+  color: #1e90ff;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Adicional: Estilo para links futuros */
+.about a {
+  color: #ff7f50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,198 @@
+@import url("./header.css");
+@import url("./footer.css");
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Hero section */
+.hero {
+  padding-top: 120px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px; /* Espaçamento interno para o conteúdo */
+  background-image: url("../img/local/dom-pedro-laguna.jpg"); /* Substitua pela imagem desejada */
+  background-size: cover; /* Ajusta a imagem ao tamanho do conteúdo */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Escurece a imagem */
+  z-index: 0;
+}
+
+.hero-content {
+  position: absolute; /* Posiciona o conteúdo em relação ao contêiner pai */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajusta o ponto de referência para o centro */
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  max-width: 600px; /* Limita a largura do conteúdo */
+  z-index: 50;
+}
+
+.hero-content h1 {
+  font-size: 40px; /* Tamanho do título */
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px; /* Tamanho do parágrafo */
+  margin-bottom: 30px;
+}
+
+.list-unstyled {
+  list-style-type: none;
+}
+
+.plans-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: space-around;
+  padding: 32px 0;
+}
+
+.plan-card {
+  position: relative;
+  overflow: hidden; /* Garante que o ::before não ultrapasse o card */
+  z-index: 0; /* Define o plano de fundo para trás */
+  padding: 2rem;
+
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+  width: 100%;
+}
+
+.plan-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.1)
+  );
+  z-index: -1; /* Move o ::before para trás do conteúdo */
+  transition: opacity 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card:hover::before {
+  opacity: 1;
+}
+
+.plan-card.white {
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+}
+
+.plan-card.blue {
+  background: linear-gradient(135deg, #f1f8ff, #d0eaff);
+}
+
+.title-plan-gold {
+  color: #ffd700;
+}
+
+.title-plan-platinum {
+  color: #87afc7;
+}
+
+.price-plan {
+  text-align: center;
+  font-size: 32px;
+}
+
+.plan-card h2 span.badge {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-size: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.form-select {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plan-price-gold {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ffd700, #f1c27d, #ffb800);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.plan-price-platinum {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #1e3a8a, #2563eb, #3b82f6);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  .plans-container {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    width: 250px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
